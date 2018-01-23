@@ -31,12 +31,8 @@ gem 'mongoid', '~> 6.2', '>= 6.2.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # rspec-rails is a testing framework for Rails 3+.
-  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   # factory_bot_rails provides integration between factory_bot and rails 3 or newer
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
-  # Strategies for cleaning databases. Can be used to ensure a clean state for testing
-  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
 end
 
 group :development do
@@ -54,7 +50,12 @@ group :test do
   # Capybara is an integration testing tool for rack based web applications. It simulates how a user would interact with a website
   gem 'capybara', '~> 2.17'
   # RSpec matches for Mongoid models, including association and validation matchers
+  gem 'mongoid-compatibility'
   gem 'mongoid-rspec', git: 'https://github.com/mongoid-rspec/mongoid-rspec.git'
+  # rspec-rails is a testing framework for Rails 3+.
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  # Strategies for cleaning databases. Can be used to ensure a clean state for testing
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
