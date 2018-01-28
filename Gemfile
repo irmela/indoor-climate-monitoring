@@ -56,6 +56,8 @@ group :test do
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   # Strategies for cleaning databases. Can be used to ensure a clean state for testing
   gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
+  # A gem providing "time travel" and "time freezing" capabilities, making it dead simple to test time-dependent code
+  gem 'timecop', '~> 0.9.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
